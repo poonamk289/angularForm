@@ -1,0 +1,35 @@
+<!-- <p>reactive-form works!</p> -->
+<h1>Reactive Form</h1>
+<form [formGroup]="outline" (submit)="submit()">
+
+<div formGroupName="name">
+<label for="name">First Name: </label>
+<input type="text" id="fname"  formControlName="firstname"    placeholder="enter Firstname"><br><br>
+
+
+<label for="name">Last Name: </label>
+<input type="text"id="lname" formControlName="lastname" placeholder="enter Lastname"><br><br>
+</div>
+<div formGroupName="address"> 
+
+    <label for="name">PermanentAddress: </label>
+    <input type="text" id="paddress"  formControlName="permanentAddress"    placeholder="PermanentAddress"><br><br>
+    <label for="name">CurrentAddress: </label>
+    <input type="text" id="fname"  formControlName="currentAddress"    placeholder="CurrentAddress"><br><br>
+        
+    
+</div>
+
+<div formGroupName="country">
+
+    <label for="name">State </label>
+    <input type="text" id="State"  formControlName="state"    placeholder="state"><br><br>
+    <label for="name">City: </label>
+    <input type="text" id="city"  formControlName="city"    placeholder="city"><br><br>
+    <label for="name">district: </label>
+    <input type="text" id="district"  formControlName="district"    placeholder="district"><br><br> 
+</div>
+<button type="submit">submit</button>
+</form>
+
+{{outline.value|json}}

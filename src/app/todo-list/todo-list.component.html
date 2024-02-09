@@ -1,0 +1,22 @@
+<form #my_form="ngForm">
+<label for ="to-do_list">Title</label>
+<input type ="text" 
+       name="to-do_list"
+       [(ngModel)]="todo"
+       
+ placeholder="write a task">
+
+ <input type ="text" 
+       name="te"
+       [(ngModel)]="todo1"
+       
+ placeholder="write a task">
+
+
+<button (click)="addTodo()">Submit</button>
+
+</form>
+{{my_form.value|json}}
+
+{{todosrv.allTodo| json}}
+{{todosrv.all| json}}
